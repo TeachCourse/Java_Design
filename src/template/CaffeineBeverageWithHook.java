@@ -1,5 +1,8 @@
 package template;
 
+/**
+ * Created by http://teachcourse.cn on 2018/03/22.
+ */
 public abstract class CaffeineBeverageWithHook {
 	public final void prepareRecipe() {
 		boilWater();

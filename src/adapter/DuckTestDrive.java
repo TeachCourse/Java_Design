@@ -4,6 +4,9 @@ import adapter.impl.MallardDuck;
 import adapter.impl.TurkeyAdapter;
 import adapter.impl.WildTurkey;
 
+/**
+ * Created by http://teachcourse.cn on 2018/03/22.
+ */
 public class DuckTestDrive {
 	public static void main(String[] args) {
 		MallardDuck duck = new MallardDuck();

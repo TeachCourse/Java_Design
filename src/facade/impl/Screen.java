@@ -1,5 +1,8 @@
 package facade.impl;
 
+/**
+ * Created by http://teachcourse.cn on 2018/03/22.
+ */
 public class Screen {
 
 	public void down() {
@@ -8,7 +11,7 @@ public class Screen {
 
 	public void up() {
 		System.out.println("Theater Screen going up");
-		
+
 	}
 
 }

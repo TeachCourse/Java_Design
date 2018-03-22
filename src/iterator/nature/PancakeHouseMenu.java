@@ -5,6 +5,9 @@ import iterator.MenuItem;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+/**
+ * Created by http://teachcourse.cn on 2018/03/22.
+ */
 public class PancakeHouseMenu implements Menu {
 	ArrayList<MenuItem> menuItems;
 

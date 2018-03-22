@@ -2,6 +2,9 @@ package iterator;
 
 import iterator.impl.DinerMenuIterator;
 
+/**
+ * Created by http://teachcourse.cn on 2018/03/22.
+ */
 public class DinerMenu {
 	static final int MAX_ITEMS = 6;
 	int numberOfItems = 0;

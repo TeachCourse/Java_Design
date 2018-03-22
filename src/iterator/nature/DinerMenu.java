@@ -5,7 +5,10 @@ import java.util.Iterator;
 import iterator.MenuItem;
 import iterator.nature.impl.DinerMenuIterator;
 
-public class DinerMenu implements Menu{
+/**
+ * Created by http://teachcourse.cn on 2018/03/22.
+ */
+public class DinerMenu implements Menu {
 	static final int MAX_ITEMS = 6;
 	int numberOfItems = 0;
 	MenuItem[] menuItems;

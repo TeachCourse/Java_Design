@@ -4,6 +4,9 @@ import java.util.Iterator;
 
 import iterator.MenuItem;
 
+/**
+ * Created by http://teachcourse.cn on 2018/03/22.
+ */
 public class DinerMenuIterator implements Iterator<MenuItem> {
 	MenuItem[] items;
 	int position = 0;
@@ -28,13 +31,14 @@ public class DinerMenuIterator implements Iterator<MenuItem> {
 
 	@Override
 	public void remove() {
-		if(position<=0)
-			throw new IllegalStateException("Your can't remove an item until you've done at least one next()");
-		if(items[position-1]!=null){
-			for (int i =position-1; i<(items.length-1); i++) {
-				items[i]=items[i+1];
+		if (position <= 0)
+			throw new IllegalStateException(
+					"Your can't remove an item until you've done at least one next()");
+		if (items[position - 1] != null) {
+			for (int i = position - 1; i < (items.length - 1); i++) {
+				items[i] = items[i + 1];
 			}
-			items[items.length-1]=null;
+			items[items.length - 1] = null;
 		}
 	}
 }

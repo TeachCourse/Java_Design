@@ -3,6 +3,9 @@ package factory.abstra.impl;
 import factory.abstra.Pizza;
 import factory.abstra.PizzaIngredientFactory;
 
+/**
+ * Created by http://teachcourse.cn on 2018/03/22.
+ */
 public class CheesePizza extends Pizza {
 	PizzaIngredientFactory ingredientFactory;
 

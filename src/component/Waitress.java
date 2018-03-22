@@ -1,7 +1,8 @@
 package component;
 
-import iterator.Iterator;
-
+/**
+ * Created by http://teachcourse.cn on 2018/03/22.
+ */
 public class Waitress {
 	MenuComponent allMenus;
 

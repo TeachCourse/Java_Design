@@ -5,6 +5,9 @@ import java.util.function.Consumer;
 
 import component.MenuComponent;
 
+/**
+ * Created by http://teachcourse.cn on 2018/03/22.
+ */
 public class NullIterator implements Iterator<MenuComponent> {
 
 	@Override

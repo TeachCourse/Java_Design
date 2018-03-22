@@ -3,6 +3,9 @@ package iterator.impl;
 import iterator.Iterator;
 import iterator.MenuItem;
 
+/**
+ * Created by http://teachcourse.cn on 2018/03/22.
+ */
 public class DinerMenuIterator implements Iterator {
 	MenuItem[] items;
 	int position = 0;
@@ -20,7 +23,7 @@ public class DinerMenuIterator implements Iterator {
 
 	@Override
 	public Object next() {
-		MenuItem menuItem=items[position];
+		MenuItem menuItem = items[position];
 		position++;
 		return menuItem;
 	}

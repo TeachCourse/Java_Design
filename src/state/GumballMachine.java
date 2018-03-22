@@ -5,6 +5,9 @@ import state.impl.NoQuarterState;
 import state.impl.SoldOutState;
 import state.impl.WinnerState;
 
+/**
+ * Created by http://teachcourse.cn on 2018/03/22.
+ */
 public class GumballMachine {
 	State soldOutState;
 	State noQuarterState;

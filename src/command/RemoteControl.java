@@ -2,6 +2,9 @@ package command;
 
 import command.impl.NoCommand;
 
+/**
+ * Created by http://teachcourse.cn on 2018/03/22.
+ */
 public class RemoteControl {
 	Command[] onCommands;
 	Command[] offCommands;

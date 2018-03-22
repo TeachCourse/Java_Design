@@ -6,6 +6,9 @@ import java.util.function.Consumer;
 
 import component.MenuComponent;
 
+/**
+ * Created by http://teachcourse.cn on 2018/03/22.
+ */
 public class CompositeIterator implements Iterator<MenuComponent> {
 	Stack<Iterator<MenuComponent>> stack = new Stack<Iterator<MenuComponent>>();
 
@@ -41,7 +44,7 @@ public class CompositeIterator implements Iterator<MenuComponent> {
 
 	@Override
 	public void remove() {
-         throw new UnsupportedOperationException();
+		throw new UnsupportedOperationException();
 	}
 
 }

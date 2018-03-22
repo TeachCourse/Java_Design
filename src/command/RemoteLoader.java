@@ -12,6 +12,9 @@ import command.impl.MacroCommand;
 import command.impl.StereoOffWithCDCommand;
 import command.impl.StereoOnWithCDCommand;
 
+/**
+ * Created by http://teachcourse.cn on 2018/03/22.
+ */
 public class RemoteLoader {
 	public static void main(String[] args) {
 		RemoteControl remoteControl = new RemoteControl();
@@ -84,7 +87,6 @@ public class RemoteLoader {
 		remoteControl.offButtonWasPushed(6);
 		remoteControl.undoButterWasPushed();
 
-		
 		Command[] partyOn = { livingRoomLightOn, kitchenLightOn, ceilingFanOn,
 				garageDoorUp, stereoOnWithCD };
 		Command[] partyOff = { livingRoomLightOff, kitchenLightOff,

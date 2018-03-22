@@ -9,6 +9,9 @@ import facade.impl.Screen;
 import facade.impl.TheaterLights;
 import facade.impl.Tuner;
 
+/**
+ * Created by http://teachcourse.cn on 2018/03/22.
+ */
 public class HomeTheaterTestDrive {
 	public static void main(String[] args) {
 		Amplifier amp = new Amplifier();
