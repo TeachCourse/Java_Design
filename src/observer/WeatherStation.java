@@ -16,6 +16,16 @@ public class WeatherStation {
 		StatisticsDisplay statisticsDisplay = new StatisticsDisplay(weatherData);
 		ForecastDisplay forecastDisplay = new ForecastDisplay(weatherData);
 
+		//移除掉已注册的观察者
+		weatherData.removeObserver(currentDisplay);
+		weatherData.removeObserver(statisticsDisplay);
+		weatherData.removeObserver(forecastDisplay);
+		
+		//重新注册观察者
+		weatherData.registerObserver(currentDisplay);
+		weatherData.registerObserver(statisticsDisplay);
+		weatherData.registerObserver(forecastDisplay);
+		
 		weatherData.setMeasurements(80, 65, 30.4f);
 		weatherData.setMeasurements(82, 70, 29.2f);
 		weatherData.setMeasurements(78, 90, 29.2f);
