@@ -1,5 +1,8 @@
 package singleton;
 
+/**
+ * Created by http://teachcourse.cn on 2018/03/22.
+ */
 public class ChocolateBoiler {
 	private volatile ChocolateBoiler instance;
 	private boolean empty;
@@ -25,20 +28,20 @@ public class ChocolateBoiler {
 		if (isEmpty()) {
 			empty = false;
 			boiled = false;
-			// åœ¨é”…ç‚‰å†…å¡«æ»¡å·§å…‹åŠ›å’Œç‰›å¥¶çš„æ··åˆç‰©
+			// ÔÚ¹øÂ¯ÄÚÌîÂúÇÉ¿ËÁ¦ºÍÅ£ÄÌµÄ»ìºÏÎï
 		}
 	}
 
 	public void drain() {
 		if (!isEmpty() && isBoiled()) {
-			// æ’å‡ºç…®æ²¸çš„å·§å…‹åŠ›å’Œç‰›å¥¶
+			// ÅÅ³öÖó·ĞµÄÇÉ¿ËÁ¦ºÍÅ£ÄÌ
 			empty = true;
 		}
 	}
 
 	public void boil() {
 		if (!isEmpty() && !isBoiled()) {
-			// å°†ç‚‰å†…ç‰©ç…®æ²¸
+			// ½«Â¯ÄÚÎïÖó·Ğ
 			boiled = true;
 		}
 	}

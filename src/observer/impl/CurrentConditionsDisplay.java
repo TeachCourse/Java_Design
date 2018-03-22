@@ -4,6 +4,9 @@ import observer.DisplayElement;
 import observer.Observer;
 import observer.Subject;
 
+/**
+ * Created by http://teachcourse.cn on 2018/03/22.
+ */
 public class CurrentConditionsDisplay implements Observer, DisplayElement {
 	private float temperature;
 	private float humidity;

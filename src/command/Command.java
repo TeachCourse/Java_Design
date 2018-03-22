@@ -1,6 +1,10 @@
 package command;
 
+/**
+ * Created by http://teachcourse.cn on 2018/03/22.
+ */
 public interface Command {
-    void execute();
-    void undo();
+	void execute();
+
+	void undo();
 }

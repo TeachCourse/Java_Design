@@ -1,5 +1,8 @@
 package factory.simple;
 
+/**
+ * Created by http://teachcourse.cn on 2018/03/22.
+ */
 public class PizzaStore {
 	SimplePizzaFactory factory;
 

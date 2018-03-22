@@ -3,9 +3,12 @@ package command.impl;
 import command.Command;
 import command.GarageDoor;
 
-public class GarageDoorDownCommand implements Command{
+/**
+ * Created by http://teachcourse.cn on 2018/03/22.
+ */
+public class GarageDoorDownCommand implements Command {
 	GarageDoor garageDoor;
-	
+
 	public GarageDoorDownCommand(GarageDoor garageDoor) {
 		this.garageDoor = garageDoor;
 	}
@@ -18,7 +21,7 @@ public class GarageDoorDownCommand implements Command{
 	@Override
 	public void undo() {
 		garageDoor.up();
-		
+
 	}
 
 }

@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import observer.Observer;
 import observer.Subject;
 
+/**
+ * Created by http://teachcourse.cn on 2018/03/22.
+ */
 public class WeatherData implements Subject {
 	private ArrayList<Observer> observers;
 	private float temperature;
@@ -22,29 +25,30 @@ public class WeatherData implements Subject {
 
 	@Override
 	public void removeObserver(Observer o) {
-      int i=observers.indexOf(o);
-      if(i>=0){
-    	  observers.remove(i);
-      }
+		int i = observers.indexOf(o);
+		if (i >= 0) {
+			observers.remove(i);
+		}
 	}
 
 	@Override
 	public void notifyObservers() {
 		for (int i = 0; i < observers.size(); i++) {
-			Observer observer=observers.get(i);
+			Observer observer = observers.get(i);
 			observer.update(temperature, humidity, pressure);
 		}
 
 	}
 
-	public void measurementsChanged(){
+	public void measurementsChanged() {
 		notifyObservers();
 	}
-	
-	public void setMeasurements(float temperature,float humidity,float pressure){
-		this.temperature=temperature;
-		this.humidity=humidity;
-		this.pressure=pressure;
+
+	public void setMeasurements(float temperature, float humidity,
+			float pressure) {
+		this.temperature = temperature;
+		this.humidity = humidity;
+		this.pressure = pressure;
 		measurementsChanged();
 	}
 
@@ -59,6 +63,5 @@ public class WeatherData implements Subject {
 	public float getPressure() {
 		return pressure;
 	}
-	
-	
+
 }

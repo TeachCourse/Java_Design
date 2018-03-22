@@ -3,6 +3,9 @@ package component;
 import component.impl.Menu;
 import component.impl.MenuItem;
 
+/**
+ * Created by http://teachcourse.cn on 2018/03/22.
+ */
 public class MenuTestDrive {
 	public static void main(String[] args) {
 		MenuComponent pancakeHouseMenu = new Menu("PANCAKE HOUSE MENU",

@@ -6,6 +6,9 @@ import java.io.InputStreamReader;
 
 import template.CaffeineBeverageWithHook;
 
+/**
+ * Created by http://teachcourse.cn on 2018/03/22.
+ */
 public class CoffeeWithHook extends CaffeineBeverageWithHook {
 
 	@Override
