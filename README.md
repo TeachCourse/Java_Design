@@ -5,9 +5,92 @@
 
 
 ## 代理模式
-包装一个对象，来控制对它的访问
+包装一个对象，来控制对它的访问（重点学习动态代理涉及反射知识） [源码例子](src/proxy)
 
 ![代理模式](img/design_pattern_proxy.png)
+
+定义一个接口
+
+```java
+public interface IProgrammer {
+       void developeApp();
+       void developeWebSite();
+       void developeServer();
+}
+```
+
+真实的对象实现接口的方法
+
+```java
+public class RealSubject implements IProgrammer {
+
+	@Override
+	public void developeApp() {
+		System.out.println("客户需要开发一个包含Android客户端、iPhone客户端的APP");
+
+	}
+
+	@Override
+	public void developeWebSite() {
+		System.out.println("客户需要开发一个PC端网站");
+
+	}
+
+	@Override
+	public void developeServer() {
+		System.out.println("客户需要开发一个服务于APP和PC网站的后台");
+
+	}
+
+}
+
+```
+
+假的对象调用真实对象的方法
+
+```java
+public class ProgramTestDrive {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		//被代理类
+		RealSubject realSubject = new RealSubject();
+		
+		Class<?> clazz = realSubject.getClass();
+		ClassLoader loader = clazz.getClassLoader();
+		
+		OwerInvocationHandler handler = new OwerInvocationHandler(realSubject);
+		IProgrammer iProgrammer = new ProxySubject().getOwerProxy(loader,
+				new Class[] { IProgrammer.class }, handler);
+		
+		iProgrammer.developeApp();
+		iProgrammer.developeWebSite();
+		iProgrammer.developeWebSite();
+	}
+
+}
+```
+
+```java
+public class ProxySubject {
+    
+	/**
+	 * 返回一个代理类
+	 * @param loader
+	 * @param clazz
+	 * @param handler
+	 * @return
+	 */
+	public IProgrammer getOwerProxy(ClassLoader loader, Class<?> clazz[],
+			InvocationHandler handler) {
+		return (IProgrammer) Proxy.newProxyInstance(loader, clazz, handler);
+	}
+}
+```
+
+`Proxy`属于`java.lang.reflect`反射包下的类，传入一个真实对象的ClassLoader，真实对象实现的接口和`java.lang.reflect`包下InvocationHandler的一个子类，得到一个代理的对象，代理对象实现真实对象一样的接口，所以可以调用真实对象实现的接口方法
 
 
 ## 外观模式
