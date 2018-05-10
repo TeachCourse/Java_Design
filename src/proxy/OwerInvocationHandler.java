@@ -18,7 +18,7 @@ public class OwerInvocationHandler implements InvocationHandler {
 	@Override
 	public Object invoke(Object arg0, Method arg1, Object[] arg2)
 			throws Throwable {
-		//programmerÊÇÖÇÐÐarg1·½·¨µÄ¶ÔÏó£¬·µ»Ø¸Ã¶ÔÏó
+		//programmeræ˜¯æ‰§è¡Œarg1æ–¹æ³•çš„å¯¹è±¡ï¼Œè¿”å›žè¯¥å¯¹è±¡
 		return arg1.invoke(programmer, arg2);
 	}
 }
