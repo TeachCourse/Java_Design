@@ -19,6 +19,7 @@ public class OwnerInvocationHandler implements InvocationHandler {
 	public Object invoke(Object arg0, Method arg1, Object[] arg2)
 			throws Throwable {
 		//programmer是执行arg1方法的对象，返回该对象
+
 		return arg1.invoke(programmer, arg2);
 	}
 }
