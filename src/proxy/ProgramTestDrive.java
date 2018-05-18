@@ -13,12 +13,14 @@ public class ProgramTestDrive {
 	 */
 	public static void main(String[] args) {
 		//被代理类
-		RealSubject realSubject = new RealSubject();
+		IProgrammer realSubject = new RealSubject();
 		
-		Class<?> clazz = realSubject.getClass();
+		//获取被代理类的ClassLoader
+		Class<?> clazz=realSubject.getClass();
 		ClassLoader loader = clazz.getClassLoader();
 		
-		OwerInvocationHandler handler = new OwerInvocationHandler(realSubject);
+		//重写InvocationHandler的invoke(Object,Method,Object[])方法
+		OwnerInvocationHandler handler = new OwnerInvocationHandler(realSubject);
 		IProgrammer iProgrammer = new ProxySubject().getOwerProxy(loader,
 				new Class[] { IProgrammer.class }, handler);
 		

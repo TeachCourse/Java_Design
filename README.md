@@ -1,10 +1,10 @@
-## 适配器模式
+## 1、适配器模式
 包装一个对象，来提供不同的接口  [源码例子](src/adapter)
 
 ![适配器模式](img/design_pattern_adapter.png)
 
 
-## 代理模式
+## 2、代理模式
 包装一个对象，来控制对它的访问（重点学习动态代理涉及反射知识） [源码例子](src/proxy)
 
 ![代理模式](img/design_pattern_proxy.png)
@@ -90,6 +90,22 @@ public class ProxySubject {
 }
 ```
 
+代理模式简单的例子
+
+```
+//被代理的类
+IProgrammer realSubject=new RealSubject();
+
+//代理类
+IProgrammer proxySubject=Proxy.newProxyInstance(classLoader,new Class[]{IProgrammer.class},new InvocationHandler());
+
+//使用代理类访问接口提供的方法，用户只和代理类交互，起到保护被代理类的目的
+proxySubject.developeApp();
+proxySubject.developeWebSite();
+proxySubject.developeWebSite();
+```
+
+
 `Proxy`属于`java.lang.reflect`反射包下的类，传入一个真实对象的ClassLoader，真实对象实现的接口和`java.lang.reflect`包下InvocationHandler的一个子类，得到一个代理的对象，代理对象实现真实对象一样的接口，所以可以调用真实对象实现的接口方法
 
 
@@ -98,9 +114,13 @@ public class ProxySubject {
 
 
 ## 装饰者模式
-包装另一个对象，并提供额外的行为 [源码例子](src/decorator)
+包装另一个对象，并提供额外的行为
 
 ![装饰者模式](img/design_pattern_decorator.png)
+
+例子源码相关类，绘制装饰者UML图 [源码例子](src/decorator)
+
+![装饰者UML图谱例子1](img/design_pattern_decorator_example_1.png)
 
 
 ## 命令模式

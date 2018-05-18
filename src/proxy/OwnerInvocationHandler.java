@@ -6,11 +6,11 @@ import java.lang.reflect.Method;
 /**
  * Created by http://teachcourse.cn on 2018-3-30.
  */
-public class OwerInvocationHandler implements InvocationHandler {
+public class OwnerInvocationHandler implements InvocationHandler {
     private IProgrammer programmer;
     
     
-	public OwerInvocationHandler(IProgrammer programmer) {
+	public OwnerInvocationHandler(IProgrammer programmer) {
 		this.programmer = programmer;
 	}
 
@@ -18,7 +18,7 @@ public class OwerInvocationHandler implements InvocationHandler {
 	@Override
 	public Object invoke(Object arg0, Method arg1, Object[] arg2)
 			throws Throwable {
-		//programmer是智行arg1方法的对象，返回该对象
+		//programmer是执行arg1方法的对象，返回该对象
 		return arg1.invoke(programmer, arg2);
 	}
 }
