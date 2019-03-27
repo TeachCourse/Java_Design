@@ -17,8 +17,8 @@ public class ProxySubject {
 	 * @param handler
 	 * @return
 	 */
-	public IProgrammer getOwerProxy(ClassLoader loader, Class<?> clazz[],
-			InvocationHandler handler) {
+	public IProgrammer getOwnerProxy(ClassLoader loader, Class<?> clazz[],
+									 InvocationHandler handler) {
 		return (IProgrammer) Proxy.newProxyInstance(loader, clazz, handler);
 	}
 }

@@ -9,8 +9,8 @@ public class SimpleTestDriver {
         //使用封装的类获取代理对象，更加的方便
         IProgrammer programmer=(IProgrammer) new SimpleInvokeProxy().newProxyInstance(new RealSubject());
 
-        programmer.developeApp();
-        programmer.developeWebSite();
-        programmer.developeWebSite();
+        programmer.developApp();
+        programmer.developWebSite();
+        programmer.developWebSite();
     }
 }

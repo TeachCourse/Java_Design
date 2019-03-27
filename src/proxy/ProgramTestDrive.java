@@ -21,12 +21,12 @@ public class ProgramTestDrive {
 		
 		//重写InvocationHandler的invoke(Object,Method,Object[])方法
 		OwnerInvocationHandler handler = new OwnerInvocationHandler(realSubject);
-		IProgrammer iProgrammer = new ProxySubject().getOwerProxy(loader,
+		IProgrammer iProgrammer = new ProxySubject().getOwnerProxy(loader,
 				new Class[] { IProgrammer.class }, handler);
 		
-		iProgrammer.developeApp();
-		iProgrammer.developeWebSite();
-		iProgrammer.developeWebSite();
+		iProgrammer.developApp();
+		iProgrammer.developWebSite();
+		iProgrammer.developWebSite();
 	}
 
 }
